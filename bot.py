@@ -26,6 +26,6 @@ async def on_ready():
 
 async def main():
     async with bot:
-        await bot.start("MTQyMjEyNjI4MDI3ODY3NTUxOA.Gk-3GS.xq5euV3-AcEBLGsliicdIcDONltdYBNHVxLGks")  # put your bot token here
+        await bot.start("bot token")  # put your bot token here
 
 asyncio.run(main())
