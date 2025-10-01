@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-AUTO_ROLE_ID = 1422154357155303434  # Role to give automatically
+AUTO_ROLE_ID = YOUR_AUTOROLE_ID  # replace with your auto-role ID
 
 class AutoRole(commands.Cog):
     def __init__(self, bot):
@@ -19,6 +19,5 @@ class AutoRole(commands.Cog):
         else:
             print(f"⚠️ Role ID {AUTO_ROLE_ID} not found in {member.guild.name}")
 
-# ---------------- SETUP ----------------
 async def setup(bot):
     await bot.add_cog(AutoRole(bot))
