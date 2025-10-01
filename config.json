@@ -1,3 +1,9 @@
 {
-    "TOKEN": "MTQyMjEyNjI4MDI3ODY3NTUxOA.GVF9R1.DWrlxMN0lsOmY362XSFNR3d2qkBLree6h2Fh6o"
+  "token": "bot_token",
+  "guild_id": your server id,
+  "owner_role_id": owner role id,
+  "autorole_id": the role which uwant to automatically give to a member,
+  "ticket_category_id": id of ticket catagory,
+  "log_channel_id": channel id where u want ur ticket transcript to be send,
+  "ticket_panel_channel_id": channel id where ticket ui msg will be send
 }
