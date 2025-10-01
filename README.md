@@ -1,1 +1,76 @@
- 
+ LunarCore Discord Bot – README
+
+This bot includes:
+
+Cog system (modular code loading)
+Presence rotation (IP + player count)
+Ticket System (UI-based, dropdown + buttons, transcript logging)
+Autorole System (auto-assign role on join)
+Owner-only commands
+
+🛠️ IDs You MUST Change
+
+All important IDs are at the top of ticket.py and autorole.py.
+
+ticket.py
+TICKETS_CATEGORY_ID = 123456789012345678   # category where tickets are created
+LOG_CHANNEL_ID = 123456789012345678        # channel for transcripts/logs
+OWNER_ROLE_ID = 123456789012345678         # role that gets pinged in tickets
+TICKET_PANEL_CHANNEL_ID = 1234567890123456 # channel where ticket panel is sent
+
+autorole.py
+AUTO_ROLE_ID = 123456789012345678          # role given when someone joins
+
+
+Replace these with your server’s real IDs.
+Right-click a channel/role → "Copy ID" (Developer Mode must be ON in Discord settings → Advanced).               
+
+🎟️ Ticket System
+
+Ticket panel shows dropdown with:
+
+📦 Purchase Support
+🎮 Gameplay Help
+⚡ Staff Help
+❓ General Query
+
+When a user selects an option:
+
+A channel is created like ticket-001.
+User + Owner role are pinged.
+Embed inside ticket includes buttons:
+✅ Claim → Marks ticket as taken.
+❌ Close → Closes ticket + saves transcript to log channel.
+➕ Add Member → Add another member to ticket.
+➖ Remove Member → Remove member from ticket.
+
+👤 Autorole System
+Every new member gets the role with ID = 1422154357155303434.
+
+🎮 Presence System
+Rotates every 10 seconds between:
+Playing play.lunarmc.fun
+Watching {X} players in LunarMC
+
+(X = current number of synced slash commands or player counter, depending on setup.)
+
+🔒 Owner-only Commands
+Any moderation commands (kick, ban, mute, etc.) are restricted to users with the 1422154213940662282.
+
+🚀 Running the Bot
+python bot.py
+
+
+If successful, you’ll see:
+
+✅ Loaded cog: ticket
+✅ Loaded cog: autorole
+✅ Loaded cog: presence
+✅ Lunar Core is online as Lunar Core#1234
+Presence: True
+🔗 Synced 8 slash commands
+
+✅ Notes
+Always keep your bot token private.
+Make sure the bot has Administrator or proper permissions in your server.
+Developer Mode must be enabled to copy IDs. 
